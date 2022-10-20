@@ -22,9 +22,10 @@ space(double heigth, double width) {
   );
 }
 
-void initializeDimensions({required context, required size}) {
+void initializeResponsive({required context, required size}) {
   rsp = Responsive(context: context, uiSize: size);
   ts = TextStyles();
+  styles = Styles();
 }
 
 Route animatedRoute(context, page) {

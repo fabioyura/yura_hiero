@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yura_hiero/default_theme.dart';
-
+import 'package:widgets/export.dart';
 import 'screens/home_screen.dart';
 
 void main() {
@@ -12,9 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    initializeResponsive(context: context, size: const Size(1366, 768));
     return MaterialApp(
       title: 'Yura Hiero DEV',
-      theme: defaultTheme,
+      debugShowCheckedModeBanner: false,
+      theme: DefaultTheme().defaultTheme(),
       home: const HomeScreen(),
     );
   }
