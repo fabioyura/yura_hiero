@@ -1,0 +1,68 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "core",
+            "cwd": "packages\\core",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "core (profile mode)",
+            "cwd": "packages\\core",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "core (release mode)",
+            "cwd": "packages\\core",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "widgets",
+            "cwd": "packages\\widgets",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "widgets (profile mode)",
+            "cwd": "packages\\widgets",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "widgets (release mode)",
+            "cwd": "packages\\widgets",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "yura_hiero",
+            "cwd": "packages\\yura_hiero",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "yura_hiero (profile mode)",
+            "cwd": "packages\\yura_hiero",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "yura_hiero (release mode)",
+            "cwd": "packages\\yura_hiero",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+name: yura_hiero
+
+packages:
+  - packages/**
+
+command: 
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  tests:
+    run: melos exec --dir-exists="test" --fail-fast -- flutter test --no-pub --coverage
+    description: Run Flutter tests for a specific package in this project.
+  analyze:
+    run: melos exec -- flutter analyze .
+    description: Run `dart analyze` in all packages.
+  get:
+    run: melos exec -- flutter pub get .
+    description: Run `pub get` in all packages.
+  clean:
+    run: melos exec -- flutter clean .
+    description: Run `flutter clean` in all packages.
+  format:
+    run: melos exec -- flutter format .
+    description: Run `flutter format` in all packages.
+  build:
+    run: melos exec -- flutter build #PLATFORM
+    description: Run `dart analyze` in all packages.
+
+  gen_mock_core: 
+    run: melos exec -- dart run build_runner build --delete-conflicting-outputs
+    select-package:
+      scope: 'core'
+  
+  core_test:
+    run: melos exec --dir-exists="test" --fail-fast -- flutter test --no-pub --coverage
+    description: Run Flutter tests for core package.
+    select-package:
+      scope: 'core'
+
+  core_coverage:
+    run: melos exec -- flutter pub global run test_cov_console
+    select-package:
+      scope: 'core'
